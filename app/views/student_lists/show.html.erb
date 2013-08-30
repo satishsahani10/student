@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Roll number:</b>
+  <%= @student_list.roll_number %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%= @student_list.first_name %>
+</p>
+
+<p>
+  <b>Middle name:</b>
+  <%= @student_list.middle_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @student_list.last_name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @student_list.address %>
+</p>
+
+<p>
+  <b>Phone number:</b>
+  <%= @student_list.phone_number %>
+</p>
+
+<p>
+  <b>Faculty:</b>
+  <%= @student_list.faculty_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_student_list_path(@student_list) %> |
+<%= link_to 'Back', student_lists_path %>

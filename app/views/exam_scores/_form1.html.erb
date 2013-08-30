@@ -1,0 +1,19 @@
+<%= semantic_form_for @exam_score do |f| %>
+    <%= f.inputs do %>
+     
+      <%= f.input :exam_id,  :as => :select, :collection => Exam.all %>
+
+      <%= f.input :student_list_id,  :as => :select, :collection => StudentList.all %>
+      
+      <%= f.input :subject_id,  :as => :select, :collection => Subject.all  %>
+      
+      <%= f.input :mark %>
+       
+    <% end %>
+    
+    <%= f.actions do %>
+      <%= f.action :submit, :as => :button %>
+      <%= f.action :cancel, :as => :link %>
+    <% end %>
+
+<% end %>

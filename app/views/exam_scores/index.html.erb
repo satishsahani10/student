@@ -1,0 +1,29 @@
+<h1>Listing exam_scores</h1>
+
+<table class="table-bordered">
+  <tr>
+    <th>Exam</th>
+    <th>Student list</th>
+    <th>Subject</th>
+    <th>Mark</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @exam_scores.each do |exam_score| %>
+  <tr>
+    <td><%= exam_score.exam %></td>
+    <td><%= exam_score.student_list %></td>
+    <td><%= exam_score.subject %></td>
+    <td><%= exam_score.mark %></td>
+    <td><%= link_to 'Show', exam_score %></td>
+    <td><%= link_to 'Edit', edit_exam_score_path(exam_score) %></td>
+    <td><%= link_to 'Destroy', exam_score, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Exam score', new_exam_score_path %>

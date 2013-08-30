@@ -1,0 +1,15 @@
+<%= semantic_form_for @result do |f| %>
+  <%= f.inputs do %>
+     <%= f.input :student_list_id,  :as => :select, :collection => StudentList.all %>
+     <%= f.input :faculty_id,  :as => :select, :collection => Faculty.all %>
+     <%= f.input :exam_id,  :as => :select, :collection => Exam.all %>
+     <%= f.input :division %>
+     <%= f.input :percentage %>
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, :as => :input %>
+  <% end %>
+<% end %>
+
+

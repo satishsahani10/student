@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Student list:</b>
+  <%= @result.student_list %>
+</p>
+
+<p>
+  <b>Faculty:</b>
+  <%= @result.faculty %>
+</p>
+
+<p>
+  <b>Exam:</b>
+  <%= @result.exam %>
+</p>
+
+<p>
+  <b>Division:</b>
+  <%= @result.division %>
+</p>
+
+<p>
+  <b>Percentage:</b>
+  <%= @result.percentage %>
+</p>
+
+
+<%= link_to 'Edit', edit_result_path(@result) %> |
+<%= link_to 'Back', results_path %>

@@ -1,0 +1,43 @@
+<html>
+	<title> My Blog</title>
+	
+ 	<div class="navbar-inner">
+		 <div id="container-fluid">
+		 	<ul class="nav">
+			 	 	
+			    <% if user_signed_in? %>
+			     
+			     
+
+			     
+			     <center><h5>Student Management System</h5></center>
+			     Logged In: <strong> <%= current_user.email %> </strong>.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			     &nbsp;&nbsp;
+
+			     	<%= link_to 'List of student',student_lists_path%>
+					<%= link_to 'List of College',colleges_path%>
+					<%= link_to 'List of Universities',universities_path%>
+					<%= link_to 'List of Faculty',faculties_path%>
+					<%= link_to 'List of Teacher',teachers_path%>
+					
+			    
+			    
+			    
+			         
+			    <% else %>
+			      
+			      <%= link_to "SignUp", new_user_registration_path, :class =>"btn btn-success" %>,
+			      
+			      <%= link_to "Login" , new_user_session_path, :class =>"btn btn-success" %>
+			    
+			    <% end %>
+			 </ul>
+		  </div>
+	</div>
+</html>
